@@ -1,0 +1,14 @@
+spring:
+  devtools:
+    restart:
+      enabled: true  # Set to enable hot deployment
+      additional-paths: src/main/java # restart directory
+      exclude: WEB-INF/**
+  thymeleaf:
+    cache: false # Use Thymeleaf template engine, turn off caching
+
+
+# TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
+logging:
+  level:
+    work.pollochang.fileunit.*: TRACE

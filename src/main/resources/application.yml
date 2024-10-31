@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: file-unit
+  main:
+    allow-bean-definition-overriding: true
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+  servlet:
+    # 附件上傳
+    multipart:
+      enabled: true
+      # 檔案最大大小
+      max-file-size: -1
+      # Max Request Size
+      max-request-size: -1
+      # Threshold after which files are written to disk
+      file-size-threshold: 2KB
+  profiles:
+    active: dev, fast
